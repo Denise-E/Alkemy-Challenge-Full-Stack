@@ -2,10 +2,10 @@
   "name": "alkemy-challenge-full-stack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "init": "sequelize init",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
