@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/create.css"> 
-    <title>Document</title>
-</head>
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/create.css"> 
 <body>
-    
+    <main>
+        <main>
+            <h1>Registro de operaciones</h1>
+            <form action="#" method="post">
+                <label for=""> Tipo de operación
+                        <select name="operationType" id="">
+                            <option value="income" selected>Ingreso</option>
+                            <option value="outflow">Egreso</option>
+                        </select>
+                </label>
+                <label for=""> Concepto
+                    <textarea name="concept" id="concept"></textarea>
+                </label>
+                <label for="">Monto total
+                    <input type="number" min="0" name="total" value="total"></input>
+                </label>
+                <label for="">Fecha de emision
+                    <input type="date" name="date" id="date">
+                </label>
+            </form>
+        </main>
+    </main>
 </body>
 </html>
