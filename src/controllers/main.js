@@ -1,4 +1,6 @@
 
 module.exports = {
-    index: (req,res) => res.send('Home')
+    index: (req,res) => res.render('home',{
+        style: 'home'
+    })
 }

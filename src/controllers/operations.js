@@ -1,5 +1,9 @@
 
 module.exports = {
-    create: (req,res) => res.send('Create'),
-    edit: (req,res) => res.send('Edit')
+    create: (req,res) => res.render('create',{
+        style: 'create'
+    }),
+    edit: (req,res) =>res.render('edit',{
+        style: 'edit'
+    })
 }
