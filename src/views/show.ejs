@@ -1,0 +1,18 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/show.css"> 
+
+<body>
+    <main>
+        <% if (operation) { %>
+            <p> Usted está viendo un <%= operation.type %>  </p>
+             <p>Concepto : <%= operation.description %> </p>
+            <p>Monto total : <%= operation.value %> </p>
+            <p>Fecha de emision : <%=operation.date %> </p>
+        <% }  else { %>
+           <p>No existe la operación buscada</p>
+        <% } %>
+
+        
+    </main>
+</body>
+</html>
