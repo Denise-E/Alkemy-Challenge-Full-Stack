@@ -10,5 +10,7 @@ app.listen(app.get('port'), ()=> console.log('listening on port http://localhost
 
 app.use(express.static(path.resolve(__dirname, "../public")));
 
+app.use(express.urlencoded({extended:true}));
+
 app.use(require('./routes/main.js'));
 app.use('/operations', require('./routes/operations.js'));

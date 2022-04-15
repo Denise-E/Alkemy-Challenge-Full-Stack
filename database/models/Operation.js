@@ -26,7 +26,7 @@ module.exports = (Sequelize, DataTypes) => {
     }
 
     const config = {
-        timestamps: true,
+        timestamps: false,
     }
 
     const Operation = Sequelize.define(alias,cols,config);

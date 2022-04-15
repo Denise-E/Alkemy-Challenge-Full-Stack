@@ -2,17 +2,16 @@
 <link rel="stylesheet" href="/css/create.css"> 
 <body>
     <main>
-        <main>
             <h1>Registro de operaciones</h1>
-            <form action="#" method="post">
+            <form action="/operations/save" method="post">
                 <label for=""> Tipo de operación
-                        <select name="operationType" id="">
-                            <option value="income" selected>Ingreso</option>
-                            <option value="outflow">Egreso</option>
+                        <select name="operationType">
+                            <option value="ingreso" selected>Ingreso</option>
+                            <option value="egreso" >Egreso</option>
                         </select>
                 </label>
                 <label for=""> Concepto
-                    <textarea name="concept" id="concept"></textarea>
+                    <textarea name="description" id="description"></textarea>
                 </label>
                 <label for="">Monto total
                     <input type="number" min="0" name="total" value="total"></input>
@@ -20,8 +19,8 @@
                 <label for="">Fecha de emision
                     <input type="date" name="date" id="date">
                 </label>
+                <button type="submit">Subir</button>
             </form>
-        </main>
     </main>
 </body>
 </html>
