@@ -8,7 +8,6 @@ module.exports = {
         .then( result => {
             let operations = {
                 all: [],
-                total: [],
                 meta: {
                     status: 200, 
                     url: 'api/'
@@ -24,12 +23,6 @@ module.exports = {
                     date: operation.date
                 })
             });
-
-            result.forEach((operation) => {
-                let value = parseInt(operation.value)
-                //let suma = value.reduce((num, acumulador) => {return acumulador + num}) Voy a probar desp si en la vista me toma el reduce
-                operations.total.push(value)
-            })
 
             return res.json(operations);
         })
