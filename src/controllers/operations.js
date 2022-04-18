@@ -6,9 +6,14 @@ module.exports = {
     create: (req,res) => res.render('create',{
         style: 'create'
     }),
-    edit: (req,res) =>res.render('edit',{
-        style: 'edit'
-    }),
+    edit: (req,res) =>{
+        db.Operation.findByPk(req.params.id)
+        .then((result) => res.render('edit',{
+            operation: result,
+            style: 'edit'
+        }))
+        .catch(err => res.send(err));
+    },
     show: (req,res) => {
         db.Operation.findByPk(req.params.id)
         .then((result) =>res.render('show',{
@@ -24,17 +29,18 @@ module.exports = {
             value: req.body.total,
             date: req.body.date
         })
-        .then(() => res.redirect("/home")) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
+        .then(() => res.redirect("/")) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
         .catch(err => res.send(err))
     },
-    /*
     modify: (req, res) => {
         db.Operation.update(
             {
                 description: req.body.description,
                 value: req.body.total,
                 date: req.body.date
-            }
-            ,{where: req.params.id})
-    }*/
+            },{where: {id: req.params.id}})
+        .then(() => res.redirect("/")) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
+        .catch(err => res.send(err))
+    }
+     
 }

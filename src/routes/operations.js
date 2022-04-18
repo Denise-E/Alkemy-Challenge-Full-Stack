@@ -4,11 +4,12 @@ const operations = require('../controllers/operations.js');
 
 router.get('/create', operations.create);
 
-router.get('/:id', operations.show);
 router.get('/edit/:id', operations.edit);
+router.get('/:id', operations.show);
 
 router.post('/save', operations.save);
-//router.post('/modify', operations.modify);
+
+router.put('/:id', operations.modify);
 
 
 module.exports = router;

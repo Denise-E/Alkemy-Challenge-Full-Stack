@@ -4,19 +4,26 @@
 <body>
     <main>
         <main>
-            <h1>Edición de operaciones</h1>
-            <form action="#" method="post">
-                <p>Tipo de operación: ACÁ VOY A TRAER LE DATP</p>
-                <label for=""> Concepto
-                    <textarea name="concept" id="concept"></textarea>
-                </label>
-                <label for="">Monto total
-                    <input type="number" min="0" name="total" id="total"></input>
-                </label>
-                <label for="">Fecha de emision
-                    <input type="date" name="date" id="date">
-                </label>
-            </form>
+            <% if (operation) { %>
+                <h1>Edición de operaciones</h1>
+                <form action="/operations/modify?m=PUT" method="post">
+                    <p>Tipo de operación: <%= operation.type %> </p>
+                    <label for=""> Concepto
+                        <input type="text" name="description" id="description" value="<%= operation.description %> ">
+                    </label>
+                    <label for="">Monto total
+                        <input type="number" min="0" name="total" id="total"></input>
+                    </label>
+                    <p>Volvé a cargar el monto. El monto cargado actualmente es de $<%= operation.value %></p>
+                    <label for="">Fecha de emision
+                        <input type="date" name="date" id="date" >
+                    </label>
+                    <p>Volvé a cargar la fecha. La fecha cargada actualmente es <%= operation.date %></p>
+                    <button type="submit">Guardar cambios</button>
+                </form>
+            <% }  else { %>
+                <p>No existe la operación buscada</p>
+             <% } %>
     </main>
 </body>
 </html>
