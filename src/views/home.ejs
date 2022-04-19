@@ -4,6 +4,15 @@
 <body>
     <main>
         <h1>Bienvenid@ a la Home !</h1>
+        <h3>Últimas operaciones :</h3>
+        <% operations.forEach(element => { %>
+            <article>
+                <p><%= element.type %> </p>
+                <p><%= element.description %> </p>
+                <p>$<%= element.value %> </p>
+                <p><%= element.date %> </p>
+            </article>
+        <% }) %>
     </main>
 </body>
 </html>
