@@ -6,7 +6,7 @@
         <main>
             <% if (operation) { %>
                 <h1>Edición de operaciones</h1>
-                <form action="/operations/modify?m=PUT" method="post">
+                <form action="/operations/<%= operation.id %>?m=PUT" method="post">
                     <p>Tipo de operación: <%= operation.type %> </p>
                     <label for=""> Concepto
                         <input type="text" name="description" id="description" value="<%= operation.description %> ">
