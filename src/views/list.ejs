@@ -1,0 +1,17 @@
+<%- include("./includes/head.ejs")  %> 
+<link rel="stylesheet" href="/css/list.css">
+
+<body>
+    <%- include('./includes/header.ejs') %>
+    <main>
+        <h1>Todas las operaciones :</h1>
+        <% operations.forEach(element => { %>
+          <article>
+              <p> <%= element.type %>  </p>
+              <p> <%= element.description %>  </p>
+              <p> <%= element.value %>  </p>
+              <p> <%= element.date %>  </p>
+          </article>
+        <% }) %>
+    </main>
+</body>

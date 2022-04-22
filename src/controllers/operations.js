@@ -6,6 +6,13 @@ module.exports = {
     create: (req,res) => res.render('create',{
         style: 'create'
     }),
+    list: (req,res) => {
+        db.Operation.findAll()
+        .then(result => res.render('list', {
+            operations: result,
+            style: 'list'
+        }))
+    },
     edit: (req,res) =>{
         db.Operation.findByPk(req.params.id)
         .then((result) => res.render('edit',{
