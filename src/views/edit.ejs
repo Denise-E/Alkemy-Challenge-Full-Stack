@@ -4,6 +4,8 @@
 <body>
     <main>
         <main>
+            <%- include('./includes/header.ejs') %>
+            
             <% if (operation) { %>
                 <h1>Edición de operaciones</h1>
                 <form action="/operations/<%= operation.id %>?m=PUT" method="post">
