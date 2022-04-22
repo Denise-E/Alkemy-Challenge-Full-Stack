@@ -3,3 +3,53 @@
     padding: 0;
     margin: 0;
 }
+
+main{
+    height: 50rem;
+}
+
+#homeTitle{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#homeSection{
+    display: flex;
+    justify-content: center;
+}
+
+#homeTable{
+    width: 65%;
+    border: 1px solid black;
+}
+
+#homeTable tr{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tableTds{
+    width: 23%;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgb(66, 173, 211);
+}
+
+
+#icon{
+    width: 3rem;
+    background-color: aqua;
+    padding: 1rem;
+}
+
+#tableValue, #tableDate{
+    text-align: center;
+    align-self: center;
+}
+
+.fa-up-right{
+    color: rgb(55, 184, 87);
+}
+
+.fa-down-right{
+    color: rgb(221, 59, 53);
+}

@@ -5,16 +5,25 @@
     <%- include('./includes/header.ejs') %>
 
     <main>
-        <h1>Bienvenid@ a la Home !</h1>
-        <h3>Últimas operaciones :</h3>
-        <% operations.forEach(element => { %>
-            <article>
-                <p><%= element.type %> </p>
-                <p><%= element.description %> </p>
-                <p>$<%= element.value %> </p>
-                <p><%= element.date %> </p>
-            </article>
-        <% }) %>
+        <h1 id="homeTitle">Últimas operaciones :</h1>
+        <section id="homeSection">
+            <table id="homeTable">
+                <% operations.forEach(element => { %>
+                        <tr>
+                            <td id="icon"> 
+                                <% if (element.type == 'ingreso') { %>
+                                    <i class="fa-solid fa-up-right"></i>
+                                <% } else { %>
+                                    <i class="fa-solid fa-down-right"></i>
+                                <% } %> 
+                            </td>
+                            <td class="tableTds"><%= element.description %> </td>
+                            <td class="tableTds" id="tableValue">$<%= element.value %> </td>
+                            <td class="tableTds" id="tableDate"><%= element.date %> </td>
+                        </tr>
+                <% }) %>
+            </table>
+        </section>
     </main>
 </body>
 </html>
