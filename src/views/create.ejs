@@ -1,9 +1,9 @@
 <%- include('./includes/head.ejs') %>
 <link rel="stylesheet" href="/css/create.css"> 
 <body>
+    <%- include('./includes/header.ejs') %>
+    
     <main>
-        <%- include('./includes/header.ejs') %>
-
         <h1>Registro de operaciones</h1>
         <form action="/operations/save" method="post">
             <label for=""> Tipo de operación

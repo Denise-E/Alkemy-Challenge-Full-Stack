@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/css/edit.css"> 
 
 <body>
-    <main>
-            <%- include('./includes/header.ejs') %>
+    <%- include('./includes/header.ejs') %>
             
+    <main>
             <% if (operation) { %>
                 <h1>Edición de operaciones</h1>
                 <form action="/operations/<%= operation.id %>?m=PUT" method="post">

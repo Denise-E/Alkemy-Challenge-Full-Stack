@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/css/show.css"> 
 
 <body>
-    <main>
-        <%- include('./includes/header.ejs') %>
+    <%- include('./includes/header.ejs') %>
         
+    <main>
         <% if (operation) { %>
             <p> Usted está viendo un <%= operation.type %>  </p>
              <p>Concepto : <%= operation.description %> </p>
