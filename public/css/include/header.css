@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#headerNav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(106, 192, 223);
+    height: 4rem;
+}
+
+#headerNav a{
+    text-decoration: none;
+    color: #fff;
+    align-self: center;
+    font-size: 18px;
+}
+
+#headerNav a:hover{
+    color: #000;
+}
