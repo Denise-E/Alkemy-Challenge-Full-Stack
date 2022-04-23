@@ -5,14 +5,19 @@
     <%- include('./includes/header.ejs') %>
     
     <main>
-        <h1>Todas las operaciones :</h1>
-        <% operations.forEach(element => { %>
-          <article>
-              <p> <%= element.type %>  </p>
-              <p> <%= element.description %>  </p>
-              <p> <%= element.value %>  </p>
-              <p> <%= element.date %>  </p>
-          </article>
-        <% }) %>
+        <h1 id="listTitle">Todas las operaciones :</h1>
+            <section id="listSection">
+                <table id="listTable">
+                    <% operations.forEach(element => { %>
+                        <tr>
+                            <td> <%= element.type %></td>
+                            <td id="tableDesc" class="tableTds"> <%= element.description %></td>
+                            <td id="tableValue" class="tableTds"> <%= element.value %></td>
+                            <td id="tableDate" class="tableTds"> <%= element.date %></td>
+                        </tr>
+                    <% }) %>
+                </table>
+            </section>
+        
     </main>
 </body>
