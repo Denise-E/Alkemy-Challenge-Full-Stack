@@ -5,9 +5,10 @@
     <%- include('./includes/header.ejs') %>
             
     <main>
+            <h1 id="editTitle">Edición de operaciones</h1>
             <% if (operation) { %>
-                <h1>Edición de operaciones</h1>
-                <form action="/operations/<%= operation.id %>?m=PUT" method="post">
+                
+                <form action="/operations/<%= operation.id %>?m=PUT" method="post" id="editForm">
                     <p>Tipo de operación: <%= operation.type %> </p>
                     <label for=""> Concepto
                         <input type="text" name="description" id="description" value="<%= operation.description %> ">
@@ -20,7 +21,7 @@
                         <input type="date" name="date" id="date" >
                     </label>
                     <p>Volvé a cargar la fecha. La fecha cargada actualmente es <%= operation.date %></p>
-                    <button type="submit">Guardar cambios</button>
+                    <button type="submit" id="editBtn">Guardar cambios</button>
                 </form>
             <% }  else { %>
                 <p>No existe la operación buscada</p>
