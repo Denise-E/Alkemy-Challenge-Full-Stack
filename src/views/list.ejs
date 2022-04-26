@@ -10,7 +10,13 @@
                 <table id="listTable">
                     <% operations.forEach(element => { %>
                         <tr>
-                            <td> <%= element.type %></td>
+                            <td id="icon"> 
+                                <% if (element.type == 'ingreso') { %>
+                                    <i class="fas fa-arrow-up"></i>
+                                <% } else { %>
+                                    <i class="fas fa-arrow-down"></i>
+                                <% } %> 
+                            </td>
                             <td id="tableDesc" class="tableTds"> <%= element.description %></td>
                             <td id="tableValue" class="tableTds"> <%= element.value %></td>
                             <td id="tableDate" class="tableTds"> <%= element.date %></td>
