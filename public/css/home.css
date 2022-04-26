@@ -5,10 +5,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-main{
-    height: 50rem;
-}
-
 #homeTitle{
     text-align: center;
     padding: 3rem 0;
@@ -17,6 +13,7 @@ main{
 #homeSection{
     display: flex;
     justify-content: center;
+    margin-bottom: 4rem;
 }
 
 #homeTable{
