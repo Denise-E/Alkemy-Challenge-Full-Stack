@@ -35,3 +35,16 @@
     text-align: center;
     align-self: center;
 }
+
+#icon{
+    width: 3rem;
+    padding: 1rem 1rem 1rem 3rem ;
+}
+
+.fa-arrow-up{
+    color: rgb(55, 184, 87);
+}
+
+.fa-arrow-down{
+    color: rgb(221, 59, 53);
+}
