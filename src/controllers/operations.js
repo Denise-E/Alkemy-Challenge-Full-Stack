@@ -7,7 +7,7 @@ module.exports = {
         style: 'create'
     }),
     list: (req,res) => {
-        db.Operation.findAll()
+        db.Operation.findAll({order: [["id","DESC"]]})
         .then(result => res.render('list', {
             operations: result,
             style: 'list'
