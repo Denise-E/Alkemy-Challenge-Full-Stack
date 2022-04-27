@@ -39,7 +39,16 @@
 
 #icon{
     width: 3rem;
-    padding: 1rem 1rem 1rem 3rem ;
+    padding: 1rem;
+}
+
+#tableValue{
+    width: 4.6rem;
+    margin-right: .5rem;
+}
+
+#tableDesc{
+    width: 10rem;
 }
 
 .fa-arrow-up{
@@ -48,4 +57,51 @@
 
 .fa-arrow-down{
     color: rgb(221, 59, 53);
+}
+
+
+@media screen and (min-width: 380px){
+    #tableDesc{
+        width: 9rem;
+    }
+    #tableValue{
+        width: 7rem;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #tableDesc{
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 450px){
+    #tableDate{
+        width: 7rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #tableDesc{
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #tableDesc{
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #icon{
+        padding: 1rem 1rem 1rem 2rem ;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #icon{
+        padding: 1rem 1rem 1rem 3rem ;
+    }
 }
