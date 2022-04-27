@@ -7,9 +7,10 @@
 
 #headerNav{
     display: flex;
-    justify-content: space-around;
     background-color: rgb(106, 192, 223);
     height: 4rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 #headerNav a{
@@ -21,4 +22,18 @@
 
 #headerNav a:hover{
     color: #000;
+}
+
+@media screen and (min-width: 444px) {
+    #headerNav a{
+        margin: 0 0.75rem;
+    }
+    
+}
+
+@media screen and (min-width: 526px){
+    #headerNav{
+        justify-content: space-around;
+        height: 5rem;
+    }
 }
