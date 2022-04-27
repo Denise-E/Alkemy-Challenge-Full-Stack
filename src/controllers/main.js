@@ -4,13 +4,17 @@ const op = sequelize.Op;
 
 module.exports = {
     index: (req,res) =>{ 
-        db.Operation.findAll({ order: [["id","DESC"]], limit: 10})
-        .then((result) =>{
-            res.render('home',{
-                operations: result,
+        let lastTen = db.Operation.findAll({ order: [["id","DESC"]], limit: 10});
+        let allOp = db.Operation.findAll();
+        Promise.all([lastTen, allOp])
+        .then(([lastTen, allOp]) =>{
+           // res.send(allOp);
+                res.render('home',{
+                operations: lastTen,
+                all: allOp,
                 style: 'home'
             })
-        })
+            })
         .catch((err) => res.send(err));    
     }
 

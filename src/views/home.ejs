@@ -5,6 +5,31 @@
     <%- include('./includes/header.ejs') %>
 
     <main>
+        <% 
+            let incomes = []
+            for(let i=0; i < all.length; i++){
+                if(all[i].type == 'ingreso'){
+                    incomes.push(all[i].value)
+                }
+            }     
+            let incomesParse  = incomes.map((n) =>parseInt(n));           
+            let allIncomes = incomesParse.reduce((total,num) => total + num)
+        %> 
+        <% 
+            let outcomes = []
+            for(let i=0; i < all.length; i++){
+                if(all[i].type == 'egreso'){
+                    outcomes.push(all[i].value)
+                }
+            }     
+            let outcomesParse  = outcomes.map((n) =>parseInt(n));           
+            let allOutcomes = outcomesParse.reduce((total,num) => total + num)
+         %> 
+        <section>
+            <p>Ingresos totales : $ <%= allIncomes %> </p>
+            <p>Egresos totales : $ <%= allOutcomes %> </p>
+        </section>
+
         <h1 id="homeTitle">Últimas operaciones :</h1>
         <section id="homeSection">
             <table id="homeTable">

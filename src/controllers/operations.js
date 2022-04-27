@@ -33,7 +33,7 @@ module.exports = {
       db.Operation.create({
             type: req.body.operationType,
             description: req.body.description,
-            value: req.body.total,
+            value: parseInt(req.body.total),
             date: req.body.date
         })
         .then(() => res.redirect("/")) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
@@ -43,7 +43,7 @@ module.exports = {
         db.Operation.update(
             {
                 description: req.body.description,
-                value: req.body.total,
+                value: parseInt(req.body.total),
                 date: req.body.date
             },{where: {id: req.params.id}})
         .then(() => res.redirect('/')) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
