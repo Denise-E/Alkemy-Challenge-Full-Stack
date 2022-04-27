@@ -5,9 +5,18 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#totalsSection{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#totalsSection p{
+    margin: 0.5rem;
+}
+
 #homeTitle{
     text-align: center;
-    padding: 3rem 0;
+    padding: 2rem 0 3rem;
 }
 
 #homeSection{
@@ -37,9 +46,18 @@
     align-self: center;
 }
 
+#tableValue{
+    width: 4.6rem;
+    margin-right: .5rem;
+}
+
 #icon{
     width: 3rem;
-    padding: 1rem 1rem 1rem 3rem ;
+    padding: 1rem 1rem 1rem 1rem ;
+}
+
+#tdDesc{
+    width: 10rem;
 }
 
 .fa-arrow-up{
@@ -48,4 +66,56 @@
 
 .fa-arrow-down{
     color: rgb(221, 59, 53);
+}
+
+@media screen and (min-width: 380px){
+    #tdDesc{
+        width: 9rem;
+    }
+    #tableValue{
+        width: 7rem;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #tdDesc{
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 450px){
+    #tableDate{
+        width: 7rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #tdDesc{
+        width: 15rem;
+    }
+    #totalsSection p{
+        margin: 1rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #tdDesc{
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #icon{
+        padding: 1rem 1rem 1rem 2rem ;
+    }
+    #totalsSection{
+        padding-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #icon{
+        padding: 1rem 1rem 1rem 3rem ;
+    }
 }
