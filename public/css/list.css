@@ -23,13 +23,13 @@
 
 #listTable tr{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    border-bottom: 1px solid rgb(66, 173, 211);
 }
 
 .tableTds{
     width: 23%;
     padding: 0.5rem;
-    border-bottom: 1px solid rgb(66, 173, 211);
 }
 
 #tableValue, #tableDate{
