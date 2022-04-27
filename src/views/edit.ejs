@@ -16,15 +16,15 @@
                     <label for="">Monto total
                         <input type="number" min="0" name="total" id="total"></input>
                     </label>
-                    <p>Volvé a cargar el monto. El monto cargado actualmente es de $<%= operation.value %></p>
+                    <p class="info">Volvé a cargar el monto. El monto cargado actualmente es de $<%= operation.value %></p>
                     <label for="">Fecha de emision
                         <input type="date" name="date" id="date" >
                     </label>
-                    <p>Volvé a cargar la fecha. La fecha cargada actualmente es <%= operation.date %></p>
+                    <p class="info">Volvé a cargar la fecha. La fecha cargada actualmente es <%= operation.date %></p>
                     <button type="submit" id="editBtn">Guardar cambios</button>
                 </form>
             <% }  else { %>
-                <p>No existe la operación buscada</p>
+                <p id="exist">No existe la operación buscada</p>
              <% } %>
     </main>
 </body>
