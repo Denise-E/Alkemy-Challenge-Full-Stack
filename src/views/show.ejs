@@ -5,16 +5,19 @@
     <%- include('./includes/header.ejs') %>
         
     <main>
-        <% if (operation) { %>
-            <p> Usted está viendo un <%= operation.type %>  </p>
-             <p>Concepto : <%= operation.description %> </p>
-            <p>Monto total : <%= operation.value %> </p>
-            <p>Fecha de emision : <%=operation.date %> </p>
-        <% }  else { %>
-           <p>No existe la operación buscada</p>
-        <% } %>
+        <section id="showSection"> 
+            <% if (operation) { %>
+                <p> Usted está viendo un <b><%= operation.type %></b>  </p>
+                <p><b>Concepto :</b> <%= operation.description %> </p>
+                <p><b>Monto total :</b> $ <%= operation.value %> </p>
+                <p><b>Fecha de emision :</b> <%=operation.date %> </p>
+            <% }  else { %>
+                <p>No existe la operación buscada</p>
+            <% } %>
 
-        <a href="/operations/edit/<%= operation.id %> "><i class="fas fa-pen"></i></a>
+            <a href="/operations/edit/<%= operation.id %> "><i class="fas fa-pen"></i></a>
+        </section>
+        
     </main>
 </body>
 </html>

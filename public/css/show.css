@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#showSection{
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#showSection p{
+    margin: 1rem;
+}
+
+.fa-pen{
+    color: #000;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.fa-pen:hover{
+    color: rgba(101, 97, 97, 0.867);
+}
