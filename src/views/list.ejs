@@ -11,13 +11,14 @@
                     <% operations.forEach(element => { %>
                         <tr>
                             <td id="icon"> 
+                                <a href="/operations/edit/<%= element.id %>"><i class="fas fa-pen"></i></a> 
                                 <% if (element.type == 'ingreso') { %>
                                     <i class="fas fa-arrow-up"></i>
                                 <% } else { %>
                                     <i class="fas fa-arrow-down"></i>
                                 <% } %> 
                             </td>
-                            <td id="tableDesc" class="tableTds"> <%= element.description %></td>
+                            <td id="tableDesc" class="tableTds"><%= element.description %></td>
                             <td id="tableValue" class="tableTds">$ <%= element.value %></td>
                             <td id="tableDate" class="tableTds"> <%= element.date %></td>
                         </tr>

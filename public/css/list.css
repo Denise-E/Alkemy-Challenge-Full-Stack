@@ -39,12 +39,20 @@
 
 #icon{
     width: 3rem;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 #tableValue{
     width: 4.6rem;
     margin-right: .5rem;
+}
+
+.fa-pen{
+    color: #000;
+}
+
+.fa-pen:hover{
+    color: rgba(101, 97, 97, 0.867);
 }
 
 #tableDesc{
@@ -74,6 +82,9 @@
     #tableDesc{
         width: 10rem;
     }
+    .fa-pen{
+        margin-right: 0.25rem;
+    }
 }
 
 @media screen and (min-width: 450px){
@@ -97,11 +108,9 @@
 @media screen and (min-width: 1000px){
     #icon{
         padding: 1rem 1rem 1rem 2rem ;
+        width: 6rem;
     }
-}
-
-@media screen and (min-width: 1200px){
-    #icon{
-        padding: 1rem 1rem 1rem 3rem ;
+    .fa-pen{
+        margin-right: 0.5rem;
     }
 }
