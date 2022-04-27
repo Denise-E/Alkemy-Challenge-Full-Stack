@@ -46,7 +46,7 @@ module.exports = {
                 value: parseInt(req.body.total),
                 date: req.body.date
             },{where: {id: req.params.id}})
-        .then(() => res.redirect('/')) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
+        .then(() => res.redirect('/operations/' +req.params.id)) //AJUSTAR DESP A VISTA DINÁMICA DE LA OPERACIÓN
         .catch(err => res.send(err))
     }
      
