@@ -1,0 +1,21 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/outcomes.css"> 
+
+<body>
+    <%- include('./includes/header.ejs') %>
+
+    <main>
+        <h1>Todos los egresos :</h1>
+        <table>
+            <% outcomes.forEach(element => { %>
+                <tr>
+                    <td class="tableTds" id="tableDesc"><%= element.description %> </td>
+                    <td class="tableTds" id="tableValue">$ <%= element.value %> </td>
+                    <td class="tableTds" id="tableDate"><%= element.date %> </td>
+                </tr>
+            <% }) %>
+        </table>
+    </main>
+
+</body>
+</html>

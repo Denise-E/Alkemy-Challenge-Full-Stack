@@ -5,6 +5,7 @@ const operations = require('../controllers/operations.js');
 router.get('/create', operations.create);
 router.get('/list', operations.list);
 router.get('/incomes', operations.incomes);
+router.get('/outcomes', operations.outcomes);
 
 router.get('/edit/:id', operations.edit);
 router.get('/:id', operations.show);

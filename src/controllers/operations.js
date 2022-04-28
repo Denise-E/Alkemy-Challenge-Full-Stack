@@ -20,6 +20,13 @@ module.exports = {
             style: 'incomes'
         }))
     },
+    outcomes: (req,res) => {
+        db.Operation.findAll({where: {type: 'egreso'}})
+        .then(result => res.render('outcomes', { 
+            outcomes: result,
+            style: 'outcomes'
+        }))
+    },
     edit: (req,res) =>{
         db.Operation.findByPk(req.params.id)
         .then((result) => res.render('edit',{
