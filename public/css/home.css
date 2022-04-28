@@ -30,6 +30,13 @@
     border: 1px solid black;
 }
 
+#firstTr{
+    background-color: rgb(166, 215, 233);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
 #homeTable tr{
     display: flex;
     justify-content: space-between;
@@ -68,6 +75,10 @@
     color: rgb(221, 59, 53);
 }
 
+#firstTr #tdDesc{
+    padding-left: 1.75rem;
+}  
+
 @media screen and (min-width: 380px){
     #tdDesc{
         width: 9rem;
@@ -97,6 +108,10 @@
     #totalsSection p{
         margin: 1rem;
     }
+    #firstTr #tdDesc{
+        padding-left: 3.5rem;
+    }
+
 }
 
 @media screen and (min-width: 700px) {
@@ -112,6 +127,10 @@
     #totalsSection{
         padding-top: 3rem;
     }
+    #firstTr #tdDesc{
+        padding-left: 4rem;
+    }
+
 }
 
 @media screen and (min-width: 1200px){

@@ -21,6 +21,13 @@
     border: 1px solid black;
 }
 
+#firstTr{
+    background-color: rgb(166, 215, 233);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
 #outTable tr{
     display: flex;
     justify-content: space-between; 
@@ -55,6 +62,14 @@
     width: 10rem;
 }
 
+#firstTr #tableDesc{
+    padding-left: 3rem;
+}
+
+#firstTr #tableValue{
+    padding-left: 2rem;
+}
+
 @media screen and (min-width: 380px){
     #tableDesc{
         width: 9rem;
@@ -62,6 +77,12 @@
     #tableValue{
         width: 7rem;
         margin-right: 0;
+    }
+    #firstTr #tableDesc{
+        padding-left: 4rem;
+    }
+    #firstTr #tableValue{
+        padding-left: 2.5rem;
     }
 }
 
@@ -81,16 +102,25 @@
     #tableDesc{
         width: 15rem;
     }
+    #firstTr #tableDesc{
+        padding-left: 5rem;
+    }
 }
 
 @media screen and (min-width: 700px) {
     #tableDesc{
         width: 20rem;
     }
+    #firstTr #tableDesc{
+        padding-left: 6rem;
+    }
 }
 
 @media screen and (min-width: 1000px){
     .fa-pen{
         margin-left: 1.5rem;
+    }
+    #firstTr #tableDesc{
+        padding-left: 7rem;
     }
 }

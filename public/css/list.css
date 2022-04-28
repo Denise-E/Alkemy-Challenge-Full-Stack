@@ -21,6 +21,13 @@
     border: 1px solid black;
 }
 
+#firstTr{
+    background-color: rgb(166, 215, 233);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
 #listTable tr{
     display: flex;
     justify-content: space-between; 
@@ -67,7 +74,6 @@
     color: rgb(221, 59, 53);
 }
 
-
 @media screen and (min-width: 380px){
     #tableDesc{
         width: 9rem;
@@ -97,6 +103,10 @@
     #tableDesc{
         width: 15rem;
     }
+    
+    #firstTr #tableDesc{
+        padding-left: 3.5rem;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -112,5 +122,9 @@
     }
     .fa-pen{
         margin-right: 0.5rem;
+    }
+    
+    #firstTr #tableDesc{
+        padding-left: 4rem;
     }
 }

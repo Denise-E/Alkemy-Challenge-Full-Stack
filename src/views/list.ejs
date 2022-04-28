@@ -13,6 +13,12 @@
         <h1 id="listTitle">Todas las operaciones :</h1>
             <section id="listSection">
                 <table id="listTable">
+                    <tr id="firstTr">
+                        <td id="icon"></td>
+                        <td class="tableTds" id="tableDesc">Descripción</td>
+                        <td class="tableTds" id="tableValue">Valor</td>
+                        <td class="tableTds" id="tableDate">Fecha de emisión</td>
+                    </tr>
                     <% operations.forEach(element => { %>
                         <tr>
                             <td id="icon"> 

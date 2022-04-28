@@ -14,6 +14,12 @@
         <h1 id="outTitle">Todos los egresos :</h1>
         <section id="outSection">
             <table id="outTable">
+                <tr id="firstTr">
+                    <td id="icon"></td>
+                    <td class="tableTds" id="tableDesc">Descripción</td>
+                    <td class="tableTds" id="tableValue">Valor</td>
+                    <td class="tableTds" id="tableDate">Fecha de emisión</td>
+                </tr>
                 <% outcomes.forEach(element => { %>
                     <tr>
                         <td> 
