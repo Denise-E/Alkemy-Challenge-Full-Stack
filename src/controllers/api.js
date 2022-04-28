@@ -1,6 +1,5 @@
 const db = require('../../database/models');
 const sequelize = require("sequelize");
-const { all } = require('../routes/api');
 
 module.exports = {
     list: (req,res) => {
@@ -10,7 +9,7 @@ module.exports = {
                 all: [],
                 meta: {
                     status: 200, 
-                    url: 'api/'
+                    url: '/api'
                 }
             }
 
@@ -31,7 +30,7 @@ module.exports = {
                 err,
                 meta: {
                     status: 400,
-                    url: 'api/'
+                    url: '/api'
                 }
             }
             return res.json(result);
