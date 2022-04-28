@@ -13,6 +13,13 @@ module.exports = {
             style: 'list'
         }))
     },
+    incomes: (req,res) => {
+        db.Operation.findAll({where: {type: 'ingreso'}})
+        .then(result => res.render('incomes', { 
+            incomes: result,
+            style: 'incomes'
+        }))
+    },
     edit: (req,res) =>{
         db.Operation.findByPk(req.params.id)
         .then((result) => res.render('edit',{
