@@ -14,6 +14,14 @@
     margin: 0.5rem;
 }
 
+#totalsSection p a{
+    font-size: 10px;
+    color: rgb(44, 126, 156);
+    font-weight: bold;
+    margin-left: .5rem;
+    text-decoration: none;
+}
+
 #homeTitle{
     text-align: center;
     padding: 2rem 0 3rem;
@@ -117,6 +125,9 @@
 @media screen and (min-width: 700px) {
     #tdDesc{
         width: 20rem;
+    }
+    #totalsSection p a{
+        font-size: 12px;
     }
 }
 
