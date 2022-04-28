@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+#outTitle{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+#outSection{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+#outTable{
+    width: 65%;
+    border: 1px solid black;
+}
+
+#outTable tr{
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid rgb(66, 173, 211);
+}
+
+.tableTds{
+    width: 23%;
+    padding: 0.5rem;
+}
+
+#tableValue, #tableDate{
+    text-align: center;
+    align-self: center;
+}
+
+#icon{
+    width: 3rem;
+    padding: 1rem 0;
+}
+
+#tableValue{
+    width: 4.6rem;
+    margin-right: .5rem;
+}
+
+.fa-pen{
+    padding: 1rem;
+    color: #000;
+}
+
+.fa-pen:hover{
+    color: rgba(101, 97, 97, 0.867);
+}
+
+#tableDesc{
+    width: 10rem;
+}
+
+@media screen and (min-width: 380px){
+    #tableDesc{
+        width: 9rem;
+    }
+    #tableValue{
+        width: 7rem;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #tableDesc{
+        width: 10rem;
+    }
+}
+
+@media screen and (min-width: 450px){
+    #tableDate{
+        width: 7rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    #tableDesc{
+        width: 15rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #tableDesc{
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .fa-pen{
+        margin-left: 1.5rem;
+    }
+}
