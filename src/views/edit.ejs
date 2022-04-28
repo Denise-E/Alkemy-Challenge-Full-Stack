@@ -13,7 +13,6 @@
 
             <h1 id="editTitle">Edición de operaciones</h1>
             <% if (operation) { %>
-                
                 <form action="/operations/<%= operation.id %>?m=PUT" method="post" id="editForm">
                     <p>Tipo de operación: <%= operation.type %> </p>
                     <label for=""> Concepto

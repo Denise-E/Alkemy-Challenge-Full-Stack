@@ -11,13 +11,11 @@
                 <p><b>Concepto :</b> <%= operation.description %> </p>
                 <p><b>Monto total :</b> $ <%= operation.value %> </p>
                 <p><b>Fecha de emision :</b> <%=operation.date %> </p>
+                <a href="/operations/edit/<%= operation.id %> "><i class="fas fa-pen"></i></a>
             <% }  else { %>
                 <p>No existe la operación buscada</p>
             <% } %>
-
-            <a href="/operations/edit/<%= operation.id %> "><i class="fas fa-pen"></i></a>
         </section>
-        
     </main>
 </body>
 </html>
