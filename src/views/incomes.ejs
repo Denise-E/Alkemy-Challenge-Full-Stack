@@ -5,16 +5,21 @@
     <%- include('./includes/header.ejs') %>
 
     <main>
-        <h1>Todos los ingresos :</h1>
-        <table>
-            <% incomes.forEach(element => { %>
-                <tr>
-                    <td class="tableTds" id="tableDesc"><%= element.description %> </td>
-                    <td class="tableTds" id="tableValue">$ <%= element.value %> </td>
-                    <td class="tableTds" id="tableDate"><%= element.date %> </td>
-                </tr>
-            <% }) %>
-        </table>
+        <h1 id="incTitle">Todos los ingresos :</h1>
+        <section id="incSection">
+            <table id="incTable">
+                <% incomes.forEach(element => { %>
+                    <tr>
+                        <td> 
+                            <a href="/operations/edit/<%= element.id %>"><i class="fas fa-pen"></i></a>
+                        </td>
+                        <td class="tableTds" id="tableDesc"><%= element.description %> </td>
+                        <td class="tableTds" id="tableValue">$ <%= element.value %> </td>
+                        <td class="tableTds" id="tableDate"><%= element.date %> </td>
+                    </tr>
+                <% }) %>
+            </table>
+        </section>
     </main>
 
 </body>
