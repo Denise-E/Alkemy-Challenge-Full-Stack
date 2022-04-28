@@ -5,6 +5,11 @@
     <%- include('./includes/header.ejs') %>
     
     <main>
+        <% 
+             function formatNumber(num) {
+                return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')   
+             }
+         %>
         <h1 id="listTitle">Todas las operaciones :</h1>
             <section id="listSection">
                 <table id="listTable">
@@ -19,7 +24,7 @@
                                 <% } %> 
                             </td>
                             <td id="tableDesc" class="tableTds"><%= element.description %></td>
-                            <td id="tableValue" class="tableTds">$ <%= element.value %></td>
+                            <td id="tableValue" class="tableTds">$ <%= formatNumber(element.value) %></td>
                             <td id="tableDate" class="tableTds"> <%= element.date %></td>
                         </tr>
                     <% }) %>

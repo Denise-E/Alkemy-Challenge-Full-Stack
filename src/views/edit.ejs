@@ -5,6 +5,12 @@
     <%- include('./includes/header.ejs') %>
             
     <main>
+            <% 
+                function formatNumber(num) {
+                    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')   
+                }
+            %>
+
             <h1 id="editTitle">Edición de operaciones</h1>
             <% if (operation) { %>
                 
@@ -16,7 +22,7 @@
                     <label for="">Monto total
                         <input type="number" min="0" name="total" id="total"></input>
                     </label>
-                    <p class="info">Volvé a cargar el monto. El monto cargado actualmente es de $<%= operation.value %></p>
+                    <p class="info">Volvé a cargar el monto. El monto cargado actualmente es de $<%= formatNumber(operation.value) %></p>
                     <label for="">Fecha de emision
                         <input type="date" name="date" id="date" >
                     </label>

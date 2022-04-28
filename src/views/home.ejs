@@ -25,9 +25,14 @@
             let outcomesParse  = outcomes.map((n) =>parseInt(n));           
             let allOutcomes = outcomesParse.reduce((total,num) => total + num)
          %> 
+         <% 
+             function formatNumber(num) {
+                return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')   
+             }
+         %> 
         <section id="totalsSection">
-            <p><b>Ingresos totales :</b> $ <%= allIncomes %> </p> <a href="/operations/incomes">Ver todos</a>
-            <p><b>Egresos totales :</b> $ <%= allOutcomes %> </p> <a href="/operations/outcomes">Ver todos</a>
+            <p><b>Ingresos totales :</b> $ <%= formatNumber(allIncomes) %> </p> <a href="/operations/incomes">Ver todos</a>
+            <p><b>Egresos totales :</b> $ <%= formatNumber(allOutcomes) %> </p> <a href="/operations/outcomes">Ver todos</a>
         </section>
 
         <h1 id="homeTitle">Últimas operaciones :</h1>
@@ -43,7 +48,7 @@
                                 <% } %> 
                             </td>
                             <td class="tableTds" id="tdDesc"><%= element.description %> </td>
-                            <td class="tableTds" id="tableValue">$ <%= element.value %> </td>
+                            <td class="tableTds" id="tableValue">$ <%= formatNumber(element.value) %> </td>
                             <td class="tableTds" id="tableDate"><%= element.date %> </td>
                         </tr>
                 <% }) %>
