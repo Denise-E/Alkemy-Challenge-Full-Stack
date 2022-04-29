@@ -27,7 +27,15 @@
                     <label for="">Fecha de emision
                         <input type="date" name="date" id="date" >
                     </label>
-                    <p class="info">Volvé a cargar la fecha. La fecha cargada actualmente es <%= operation.date %></p>
+
+                    <% 
+                                var date = operation.date;
+                                var dateArray = date.split("-");
+
+                                var newDate = dateArray[2] + '/' + dateArray[1] + '/' + dateArray[0];
+                     %> 
+
+                    <p class="info">Volvé a cargar la fecha. La fecha cargada actualmente es <%= newDate %></p>
                     <button type="submit" id="editBtn">Guardar cambios</button>
                 </form>
             <% }  else { %>

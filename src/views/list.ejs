@@ -31,7 +31,15 @@
                             </td>
                             <td id="tableDesc" class="tableTds"><%= element.description %></td>
                             <td id="tableValue" class="tableTds">$ <%= formatNumber(element.value) %></td>
-                            <td id="tableDate" class="tableTds"> <%= element.date %></td>
+
+                            <% 
+                                var date = element.date;
+                                var dateArray = date.split("-");
+
+                                var newDate = dateArray[2] + '/' + dateArray[1] + '/' + dateArray[0];
+                            %> 
+
+                            <td id="tableDate" class="tableTds"> <%= newDate %></td>
                         </tr>
                     <% }) %>
                 </table>
