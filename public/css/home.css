@@ -35,7 +35,6 @@
 
 #homeTable{
     width: 65%;
-    border: 1px solid black;
 }
 #homeTable tr{
     display: flex;
