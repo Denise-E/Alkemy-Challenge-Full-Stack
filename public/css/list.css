@@ -55,11 +55,11 @@
 }
 
 .fa-pen{
-    color: #000;
+    color: rgb(42, 181, 232);
 }
 
 .fa-pen:hover{
-    color: rgba(101, 97, 97, 0.867);
+    color: #000;
 }
 
 #tableDesc{
