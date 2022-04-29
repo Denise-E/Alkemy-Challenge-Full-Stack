@@ -16,26 +16,16 @@
             <h1 id="editTitle">Edición de operaciones</h1>
             <% if (operation) { %>
                 <form action="/operations/<%= operation.id %>?m=PUT" method="post" id="editForm">
-                    <p>Tipo de operación: <%= operation.type %> </p>
+                    <p><b>Tipo de operación: <%= operation.type %> </b></p>
                     <label for=""> Concepto
                         <input type="text" name="description" id="description" value="<%= operation.description %> ">
                     </label>
                     <label for="">Monto total
-                        <input type="number" min="0" name="total" id="total"></input>
+                        <input type="number" min="0" name="total" id="total" value="<%=operation.value%>"></input>
                     </label>
-                    <p class="info">Volvé a cargar el monto. El monto cargado actualmente es de $<%= formatNumber(operation.value) %></p>
                     <label for="">Fecha de emision
-                        <input type="date" name="date" id="date" >
+                        <input type="date" name="date" id="date" value="<%=operation.date%>">
                     </label>
-
-                    <% 
-                                var date = operation.date;
-                                var dateArray = date.split("-");
-
-                                var newDate = dateArray[2] + '/' + dateArray[1] + '/' + dateArray[0];
-                     %> 
-
-                    <p class="info">Volvé a cargar la fecha. La fecha cargada actualmente es <%= newDate %></p>
                     <button type="submit" id="editBtn">Guardar cambios</button>
                 </form>
             <% }  else { %>
