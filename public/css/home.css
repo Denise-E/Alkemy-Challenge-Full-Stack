@@ -37,6 +37,11 @@
     width: 65%;
     border: 1px solid black;
 }
+#homeTable tr{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(66, 173, 211);
+}
 
 #firstTr{
     background-color: rgb(166, 215, 233);
@@ -45,11 +50,28 @@
     align-items: center;
 }
 
-#homeTable tr{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(66, 173, 211);
+#tdValue, #tdDate{
+    text-align: center;
+    align-self: center;
 }
+
+#tdValue{
+    width: 4.6rem;
+    margin-right: .5rem;
+}
+
+#empty{
+    width: 3rem;
+    padding: 1rem 1rem 1rem 1rem ;
+}
+
+#tdDesc{
+    width: 10rem;
+}
+
+#tdDesc{
+    padding-left: 1.75rem;
+} 
 
 .tableTds{
     width: 23%;
@@ -71,7 +93,7 @@
     padding: 1rem 1rem 1rem 1rem ;
 }
 
-#tdDesc{
+#tableDesc{
     width: 10rem;
 }
 
@@ -83,47 +105,45 @@
     color: rgb(221, 59, 53);
 }
 
-#firstTr #tdDesc{
-    padding-left: 1.75rem;
-}  
-
 @media screen and (min-width: 380px){
-    #tdDesc{
+    #tableDesc, #tbDesc{
         width: 9rem;
     }
-    #tableValue{
+    #tableValue, #tbValue{
         width: 7rem;
         margin-right: 0;
     }
+    
 }
 
 @media screen and (min-width: 400px) {
-    #tdDesc{
+    #tableDesc, #tbDesc{
         width: 10rem;
     }
 }
 
 @media screen and (min-width: 450px){
-    #tableDate{
+    #tableDate, #tbDate{
         width: 7rem;
     }
 }
 
 @media screen and (min-width: 550px) {
-    #tdDesc{
+    #tableDesc{
         width: 15rem;
     }
     #totalsSection p{
         margin: 1rem;
     }
-    #firstTr #tdDesc{
+    #tbDesc{
         padding-left: 3.5rem;
+        width: 15rem;
     }
 
 }
 
 @media screen and (min-width: 700px) {
-    #tdDesc{
+    #tableDesc, #tbDesc{
         width: 20rem;
     }
     #totalsSection p a{
@@ -132,20 +152,20 @@
 }
 
 @media screen and (min-width: 1000px){
-    #icon{
+    #icon, #empty{
         padding: 1rem 1rem 1rem 2rem ;
     }
     #totalsSection{
         padding-top: 3rem;
     }
-    #firstTr #tdDesc{
+    #tbDesc{
         padding-left: 4rem;
     }
 
 }
 
 @media screen and (min-width: 1200px){
-    #icon{
+    #icon, #empty{
         padding: 1rem 1rem 1rem 3rem ;
     }
 }

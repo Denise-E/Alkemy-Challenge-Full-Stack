@@ -39,10 +39,10 @@
         <section id="homeSection">
             <table id="homeTable">
                 <tr id="firstTr">
-                    <td id="icon"></td>
-                    <td class="tableTds" id="tdDesc">Descripción</td>
-                    <td class="tableTds" id="tableValue">Valor</td>
-                    <td class="tableTds" id="tableDate">Fecha de emisión</td>
+                    <td id="empty"></td>
+                    <td class="tableTds" id="tbDesc">Descripción</td>
+                    <td class="tableTds" id="tbValue">Valor</td>
+                    <td class="tableTds" id="tbDate">Fecha de emisión</td>
                 </tr>
                 <% operations.forEach(element => { %>
                         <tr>
@@ -53,7 +53,7 @@
                                     <i class="fas fa-arrow-down"></i>
                                 <% } %> 
                             </td>
-                            <td class="tableTds" id="tdDesc"><%= element.description %> </td>
+                            <td class="tableTds" id="tableDesc"><%= element.description %> </td>
                             <td class="tableTds" id="tableValue">$ <%= formatNumber(element.value) %> </td>
 
                             <% 

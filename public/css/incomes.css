@@ -34,13 +34,6 @@
     border: 1px solid black;
 }
 
-#firstTr{
-    background-color: rgb(166, 215, 233);
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
 #incTable tr{
     display: flex;
     justify-content: space-between; 
@@ -50,6 +43,35 @@
 .tableTds{
     width: 23%;
     padding: 0.5rem;
+}
+
+#firstTr{
+    background-color: rgb(166, 215, 233);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#tbValue, #tbDate{
+    text-align: center;
+    align-self: center;
+}
+
+#tbValue{
+    width: 4.6rem;
+    margin-right: .5rem;
+}
+
+#tbDesc{
+    width: 8rem;
+}
+
+#tbDesc{
+    padding-left: 3rem;
+}
+
+#tbValue{
+    padding-left: 2rem;
 }
 
 #tableValue, #tableDate{
@@ -75,14 +97,6 @@
     width: 8rem;
 }
 
-#firstTr #tableDesc{
-    padding-left: 3rem;
-}
-
-#firstTr #tableValue{
-    padding-left: 2rem;
-}
-
 @media screen and (min-width: 380px){
     #tableDesc{
         width: 9rem;
@@ -91,22 +105,25 @@
         width: 7rem;
         margin-right: 0;
     }
-    #firstTr #tableDesc{
+    #tbDesc{
         padding-left: 4rem;
+        width: 9rem;
     }
-    #firstTr #tableValue{
+    #tbValue{
         padding-left: 2.5rem;
+        width: 7rem;
+        margin-right: 0;
     }
 }
 
 @media screen and (min-width: 400px) {
-    #tableDesc{
+    #tableDesc, #tbDesc{
         width: 10rem;
     }
 }
 
 @media screen and (min-width: 450px){
-    #tableDate{
+    #tableDate, #tbDate{
         width: 7rem;
     }
 }
@@ -126,8 +143,9 @@
     #tableDesc{
         width: 15rem;
     }
-    #firstTr #tableDesc{
+    #tbDesc{
         padding-left: 5rem;
+        width: 15rem;
     }
 }
 
@@ -135,8 +153,9 @@
     #tableDesc{
         width: 20rem;
     }
-    #firstTr #tableDesc{
+    #tbDesc{
         padding-left: 6rem;
+        width: 20rem;
     }
 }
 
@@ -144,7 +163,7 @@
     .fa-pen{
         margin-left: 1.5rem;
     }
-    #firstTr #tableDesc{
+    #tbDesc{
         padding-left: 7rem;
     }
 }
