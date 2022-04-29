@@ -5,6 +5,19 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#navBack{
+    display: inline;
+    position: absolute
+}
+
+#backArrow{
+    color: #000;
+    font-size: 30px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
 #editTitle{
     text-align: center;
     padding: 3rem 1rem;
@@ -55,4 +68,16 @@
 
 #exist{
     text-align: center;
+}
+
+@media screen and (min-width: 472px) {
+    #backArrow{
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #backArrow{
+        left: 100%;
+    }
 }

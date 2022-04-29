@@ -5,6 +5,19 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#navBack{
+    display: inline;
+    position: absolute
+}
+
+#backArrow{
+    color: #000;
+    font-size: 25px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
 #incTitle{
     text-align: center;
     padding: 3rem 0;
@@ -98,7 +111,18 @@
     }
 }
 
+@media screen and (min-width: 472px) {
+    #backArrow{
+        top: 20px;
+        left: 10px;
+        font-size: 30px;
+    }
+}
+
 @media screen and (min-width: 550px) {
+    #backArrow{
+        left: 100%;
+    }
     #tableDesc{
         width: 15rem;
     }

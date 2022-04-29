@@ -10,7 +10,9 @@
                 return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')   
              }
          %>
-
+         <nav id="navBack">
+            <a href="javascript:history.back()" id="backArrow"><i class="fas fa-arrow-left"></i></a>
+        </nav>
         <h1 id="outTitle">Todos los egresos :</h1>
         <section id="outSection">
             <table id="outTable">
